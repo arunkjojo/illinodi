@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Container, Row, Col, Card, Image } from 'react-bootstrap';
 import logo from '../../assets/logo.svg'
 import { homeMenuData } from '../../utils/db/DUMMY';
 import { ControlledCarousel } from '../../components/Carousel';
-export const Home = () => {
+export const Home:FC = () => {
   return (
     <Container className='home-container'>
       <ControlledCarousel data={homeMenuData} />

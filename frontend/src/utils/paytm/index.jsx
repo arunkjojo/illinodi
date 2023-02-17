@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 const PaytmChecksum = require("../../components/PaytmChecksum");
 const https = require("https");
 
-export function PaytmButton() {
+export const PaytmButton = () => {
   const [paymentData, setPaymentData] = useState({
     token: "",
     order: "",
@@ -163,4 +163,4 @@ export function PaytmButton() {
       )}
     </div>
   );
-}
+};

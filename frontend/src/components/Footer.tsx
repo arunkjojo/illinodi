@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Facebook, ShareFill, Whatsapp } from "react-bootstrap-icons";
-import { PaytmButton } from '../utils/paytm';
-export const Footer = () => {
+import { FacebookShareButton, WhatsappShareButton } from "react-share";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import {APP_DETAILS} from '../utils/constants'
+// import { PaytmButton } from '../utils/paytm';
+export const Footer: FC = () => {
   return (
     <Navbar className="my-3 footer_navbar" bg="dark" variant="dark">
       <Container className='footer-container'>
@@ -30,23 +33,35 @@ export const Footer = () => {
             <Nav className="justify-content-end" activeKey="/#">
               <Nav.Item>
                 <Nav.Link href="/#">
-                  <Facebook color="royalblue" size={30} />
+                  <FacebookShareButton
+                    url={`${APP_DETAILS.APP_URL}`}
+                    className="Demo__some-network__share-button"
+                  >
+                    <Facebook color="royalblue" size={30} />
+                  </FacebookShareButton>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-1">
-                  <Whatsapp color="green" size={30} />
+                  <WhatsappShareButton
+                    url={`${APP_DETAILS.APP_URL}`}
+                    className="Demo__some-network__share-button"
+                  >
+                    <Whatsapp color="green" size={30} />
+                  </WhatsappShareButton>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-2">
-                  <ShareFill color="red" size={30} />
+                  <CopyToClipboard text={`${APP_DETAILS.APP_URL}`}>
+                    <ShareFill color="red" size={30} />
+                  </CopyToClipboard>
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-2">
                   {/* Paytm Component */}
-                  <PaytmButton />
+                  {/* <PaytmButton /> */}
                 </Nav.Link>
               </Nav.Item>
             </Nav>

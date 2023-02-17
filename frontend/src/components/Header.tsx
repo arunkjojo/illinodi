@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-
-export const Header = () => {
+import {APP_DETAILS} from '../utils/constants'
+export const Header:FC = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container fluid className='header-container'>
                 <Navbar.Brand className="brand" href="#home">
                     <img
-                        alt="illinodi.com"
+                        alt={APP_DETAILS.APP_NAME}
                         src="../assets/logo.svg"
                         width="30"
                         height="30"
                         className="brand-img d-inline-block align-top"
                     />{' '}
-                    <span className="brand-text">Illinodi.com</span>
+                    <span className="brand-text">{APP_DETAILS.APP_NAME}</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse className="nav-bar" id="responsive-navbar-nav">
