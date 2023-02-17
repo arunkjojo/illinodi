@@ -1,10 +1,9 @@
-import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
 import './css/mediaQuery.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header } from './components/Header';
-import { HomeBody } from './pages/home';
 import { Footer } from './components/Footer';
+import { Home } from './pages/home';
 
 function App() {
   return (
@@ -12,7 +11,9 @@ function App() {
       {/* Header */}
       <Header />
       {/* Body */}
-      <HomeBody />
+        {/* HomeBody for home page */}
+        <Home />
+        {/* HomeBody for home page */}
       {/* Footer */}
       <Footer />
     </div>

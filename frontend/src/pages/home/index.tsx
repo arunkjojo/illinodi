@@ -3,11 +3,11 @@ import { Container, Row, Col, Card, Image } from 'react-bootstrap';
 import logo from '../assets/logo.svg'
 import { homeMenuData } from '../../utils/db/DUMMY';
 import { ControlledCarousel } from '../../components/Carousel';
-export const HomeBody = () => {
+export const Home = () => {
   return (
-    <Container className='body-container'>
+    <Container className='home-container'>
       <ControlledCarousel data={homeMenuData} />
-      <Row className="g-3 body-content">
+      <Row className="g-3">
 
         {homeMenuData.map((data, index) =>
           <Col key={index} xs="4">
