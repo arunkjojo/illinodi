@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Card, Image } from 'react-bootstrap';
-import logo from '../assets/logo.svg'
+import logo from '../../assets/logo.svg'
 import { homeMenuData } from '../../utils/db/DUMMY';
 import { ControlledCarousel } from '../../components/Carousel';
 export const Home = () => {
