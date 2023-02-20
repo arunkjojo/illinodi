@@ -42,11 +42,12 @@ export const UiVirtualScroll: FC<UiVirtualScrollProps> = ({
 
         if (isUp && scrollTop === 0) {
             setIsLoading(true)
+            var newLim = upperBoundary - limit;
 
-            onPrevCallback(upperBoundary - limit).then(() => {
+            onPrevCallback(newLim).then(() => {
                 // update boundaries to move indices - limit
-                setUpperBoundary(upperBoundary - limit)
-                setLowerBoundary(lowerBoundary - limit)
+                setUpperBoundary(newLim)
+                setLowerBoundary(newLim)
 
                 // move scroll position to 1 limit height
                 if (overlayRef !== null) {
@@ -55,7 +56,7 @@ export const UiVirtualScroll: FC<UiVirtualScrollProps> = ({
                 }
                 setIsLoading(false)
             })
-        } else if (!isUp && scrollTop + clientHeight >= scrollHeight) {
+        } else if (!isUp && (scrollTop + clientHeight) >= scrollHeight) {
             setIsLoading(true)
 
             onNextCallback(lowerBoundary).then(() => {

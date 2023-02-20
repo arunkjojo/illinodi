@@ -12,6 +12,7 @@ export interface UiVirtualScrollProps {
     buffer: number
     height: string
     limit: number
+    datalist?: any
     children: JSX.Element
     onPrevCallback: (newOffset: number) => Promise<boolean>
     onNextCallback: (newOffset: number) => Promise<boolean>
