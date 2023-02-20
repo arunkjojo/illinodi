@@ -1,4 +1,5 @@
 import React, { FC, lazy } from 'react'
+import { BrowserRouter } from 'react-router-dom';
 
 // Css
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -67,6 +68,7 @@ const App:FC = () => {
   //   })
   // }
   return (
+    <BrowserRouter>
       <div className="App">
         {/* Header */}
         <HeaderComponent />
@@ -97,6 +99,7 @@ const App:FC = () => {
         {/* Footer */}
         <FooterComponent />
       </div>
+    </BrowserRouter>
   );
 }
 export default App;
