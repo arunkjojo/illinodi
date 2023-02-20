@@ -5,6 +5,7 @@ import {
 } from "@paypal/react-paypal-js";
 import { PayPalScriptOptions } from "@paypal/paypal-js/types/script-options";
 import { PayPalButtonsComponentProps } from "@paypal/paypal-js/types/components/buttons";
+import { Container } from "react-bootstrap";
 
 const paypalScriptOptions: PayPalScriptOptions = {
   "client-id":
@@ -56,8 +57,10 @@ function PayPalButton() {
 }
 export default function Payment() {
   return (
-    <PayPalScriptProvider options={paypalScriptOptions}>
-      <PayPalButton />
-    </PayPalScriptProvider>
+    <Container className='centered'>
+      <PayPalScriptProvider options={paypalScriptOptions}>
+        <PayPalButton />
+      </PayPalScriptProvider>
+    </Container>
   );
 }

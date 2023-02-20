@@ -27,6 +27,13 @@
   text-align: center;
 }
 
+.centered {
+  height: 100vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 a {
   text-decoration: none;
 }

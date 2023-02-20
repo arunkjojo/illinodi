@@ -7,7 +7,7 @@ const Header:FC = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container fluid className='header-container'>
-                <Navbar.Brand className="brand" href="#home">
+                <Navbar.Brand className="brand" href="/">
                     {/* <img
                         alt={APP_DETAILS.APP_NAME}
                         src={`../../assets/svg/logo.svg`}
