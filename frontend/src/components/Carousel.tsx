@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import logo from '../assets/logo.svg'
+import logo from '../assets/svg/logo.svg'
 type dummyData = {
   data: {
     id: number;

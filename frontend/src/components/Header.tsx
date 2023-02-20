@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import {APP_DETAILS} from '../utils/constants'
-export const Header:FC = () => {
+const Header:FC = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container fluid className='header-container'>
                 <Navbar.Brand className="brand" href="#home">
                     <img
                         alt={APP_DETAILS.APP_NAME}
-                        src="../assets/logo.svg"
+                        src={`../../assets/svg/logo.svg`}
                         width="30"
                         height="30"
                         className="brand-img d-inline-block align-top"
@@ -29,3 +29,4 @@ export const Header:FC = () => {
         </Navbar>
     )
 }
+export default Header;

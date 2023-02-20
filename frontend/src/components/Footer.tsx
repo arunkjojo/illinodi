@@ -5,7 +5,7 @@ import { FacebookShareButton, WhatsappShareButton } from "react-share";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {APP_DETAILS} from '../utils/constants'
 // import { PaytmButton } from '../utils/paytm';
-export const Footer: FC = () => {
+const Footer: FC = () => {
   return (
     <Navbar className="my-3 footer_navbar" bg="dark" variant="dark">
       <Container className='footer-container'>
@@ -72,3 +72,4 @@ export const Footer: FC = () => {
     </Navbar>
   )
 }
+export default Footer;

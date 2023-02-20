@@ -2,7 +2,7 @@ import React, { FC, useRef, useState } from 'react'
 import { UiVirtualScrollProps } from '../utils/interfaces'
 
 
-export const UiVirtualScroll: FC<UiVirtualScrollProps> = ({
+const UiVirtualScroll: FC<UiVirtualScrollProps> = ({
     offset = 0,
     buffer,
     limit,
@@ -86,3 +86,5 @@ export const UiVirtualScroll: FC<UiVirtualScrollProps> = ({
         </div>
     )
 }
+
+export default UiVirtualScroll;

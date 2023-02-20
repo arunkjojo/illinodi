@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
 import { Container, Row, Col, Card, Image } from 'react-bootstrap';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/svg/logo.svg'
 import { homeMenuData } from '../../utils/db/DUMMY';
 import { ControlledCarousel } from '../../components/Carousel';
-export const Home:FC = () => {
+
+const Home:FC = () => {
   return (
     <Container className='home-container'>
       <ControlledCarousel data={homeMenuData} />
@@ -33,3 +34,4 @@ export const Home:FC = () => {
     </Container>
   )
 }
+export default Home;

@@ -1,21 +1,26 @@
+import React, { FC, useEffect, useState, lazy, Suspense } from 'react'
+
 // Css
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
 import './css/mediaQuery.css';
 
 // API
-import { callApi } from './utils/apis/callApi';
+import callApi from './utils/apis/callApi';
 
 // Components
-import React, { FC, useEffect, useState } from 'react'
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { UiVirtualScroll } from './components/UiVirtualScroll';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+// import UiVirtualScroll from './components/UiVirtualScroll';
+
+const HeaderComponent = lazy(() => import('./components/Header'));
+const FooterComponent = lazy(() => import('./components/Footer'));
+const UiVirtualScrollComponent = lazy(() => import('./components/UiVirtualScroll'));
 
 // Pages
-import { Home } from './pages/home';
+// import { Home } from './pages/home';
 
-
+const HomeUi = lazy(() => import('./pages/home'));
 
 
 const App:FC = () => {
@@ -58,37 +63,39 @@ const App:FC = () => {
       return true
     })
   }
-
+  const renderLoader = () => <p>Loading</p>;
   return (
-    <div className="App">
-      {/* Header */}
-      <Header />
-      {/* Body */}
-        
-        {/* HomeBody for home page */}
-        <Home />
-        {/* UiVirtualScroll for home page */}
-        <UiVirtualScroll
-          buffer={buffer}
-          rowHeight={39}
-          height="50vh"
-          limit={limit}
-          datalist = {datalist}
-          onPrevCallback={prevCallback}
-          onNextCallback={nextCallback}
-        >
-          <>
-            {items.map((item: any, index: number) => (
-              <div style={{ padding: '10px' }}>
-                {isLoading ? <>Loading...</> : item}
-              </div>
-            ))}
-          </>
-        </UiVirtualScroll>
+    <Suspense fallback={renderLoader()}>
+      <div className="App">
+        {/* Header */}
+        <HeaderComponent />
+        {/* Body */}
+          
+          {/* HomeBody for home page */}
+          <HomeUi />
+          {/* UiVirtualScroll for home page */}
+          <UiVirtualScrollComponent
+            buffer={buffer}
+            rowHeight={39}
+            height="50vh"
+            limit={limit}
+            datalist = {datalist}
+            onPrevCallback={prevCallback}
+            onNextCallback={nextCallback}
+          >
+            <>
+              {items.map((item: any, index: number) => (
+                <div style={{ padding: '10px' }}>
+                  {isLoading ? <>Loading...</> : item}
+                </div>
+              ))}
+            </>
+          </UiVirtualScrollComponent>
 
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <FooterComponent />
+      </div>
+    </Suspense>
   );
 }
 export default App;
