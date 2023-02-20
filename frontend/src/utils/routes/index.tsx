@@ -1,5 +1,5 @@
 import React, {FC, lazy} from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { AppRouterProps } from '../interfaces'
 
 const HomePage = lazy(() => import('../../pages/home'));
