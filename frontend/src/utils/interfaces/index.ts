@@ -23,3 +23,7 @@ export interface APP_DATA {
     APP_URL: string,
     APP_BASE: string,
 }
+
+export interface AppRouterProps {
+    
+}

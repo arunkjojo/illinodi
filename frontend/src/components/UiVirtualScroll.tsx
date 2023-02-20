@@ -1,7 +1,6 @@
 import React, { FC, useRef, useState } from 'react'
 import { UiVirtualScrollProps } from '../utils/interfaces'
 
-
 const UiVirtualScroll: FC<UiVirtualScrollProps> = ({
     offset = 0,
     buffer,

@@ -1,13 +1,18 @@
-import React, { FC } from 'react'
+import React, { FC, lazy, Suspense } from 'react'
 import { Container, Row, Col, Card, Image } from 'react-bootstrap';
 import logo from '../../assets/svg/logo.svg'
 import { homeMenuData } from '../../utils/db/DUMMY';
-import { ControlledCarousel } from '../../components/Carousel';
+// import ControlledCarousel from '../../components/Carousel';
+
+const ControlledCarousel = lazy(() => import('../../components/Carousel'));
 
 const Home:FC = () => {
   return (
     <Container className='home-container'>
-      <ControlledCarousel data={homeMenuData} />
+      <Suspense fallback = {<div>Loading...</div>}>
+        <ControlledCarousel data={homeMenuData} />
+      </Suspense>
+      
       <Row className="g-3">
 
         {homeMenuData.map((data, index) =>

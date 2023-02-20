@@ -10,7 +10,7 @@ type dummyData = {
     description: string;
   }[];
 }
-export const ControlledCarousel:FC<dummyData> = (props: dummyData) => {
+const ControlledCarousel:FC<dummyData> = (props: dummyData) => {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex: number, e: any) => {
@@ -31,3 +31,5 @@ export const ControlledCarousel:FC<dummyData> = (props: dummyData) => {
     </Carousel>
   );
 }
+
+export default ControlledCarousel

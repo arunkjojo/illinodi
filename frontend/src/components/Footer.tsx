@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import { Facebook, ShareFill, Whatsapp } from "react-bootstrap-icons";
+import { Facebook, ShareFill, Whatsapp, Paypal } from "react-bootstrap-icons";
 import { FacebookShareButton, WhatsappShareButton } from "react-share";
+import { Link } from 'react-router-dom'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {APP_DETAILS} from '../utils/constants'
 // import { PaytmButton } from '../utils/paytm';
@@ -60,8 +61,7 @@ const Footer: FC = () => {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-2">
-                  {/* Paytm Component */}
-                  {/* <PaytmButton /> */}
+                  <Link to="payment"><Paypal color="blue" size={30} /></Link>
                 </Nav.Link>
               </Nav.Item>
             </Nav>

@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Container, Nav, Navbar,Image } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import {APP_DETAILS} from '../utils/constants'
 import logo from '../assets/svg/logo.svg'
 const Header:FC = () => {
@@ -24,7 +25,8 @@ const Header:FC = () => {
                         mr-auto => me-auto (end)
                     */}
                     <Nav className="nav ms-auto">
-                        <Nav.Link className="nav-link btn btn-outline-primary" href="#login">Login</Nav.Link>
+                        {/* <Nav.Link className="nav-link btn btn-outline-primary" href="#login">Login</Nav.Link> */}
+                        <Link to="login" className="nav-link btn btn-outline-primary" >Login</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
