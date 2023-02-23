@@ -8,6 +8,7 @@ export const homeMenuData = [
             'asdfas',
         ],
         description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        images:'https://placehold.jp/1200x200.png?text=Topic 1'
     },
     {
         id:2,
@@ -18,6 +19,7 @@ export const homeMenuData = [
             'fhdfgdfd',
         ],
         description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        images:'https://placehold.jp/1200x200.png?text=Topic 2'
     },
     {
         id:3,
@@ -28,6 +30,7 @@ export const homeMenuData = [
             'asdeefas',
         ],
         description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        images:'https://placehold.jp/1200x200.png?text=Topic 3'
     },
     {
         id:4,
@@ -38,6 +41,7 @@ export const homeMenuData = [
             'asdjhkhfas',
         ],
         description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        images:'https://placehold.jp/1200x200.png?text=Topic 4'
     },
     {
         id:5,
@@ -48,6 +52,7 @@ export const homeMenuData = [
             'aweqsdfas',
         ],
         description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        images:'https://placehold.jp/1200x200.png?text=Topic 5'
     },
     {
         id:6,
@@ -58,6 +63,7 @@ export const homeMenuData = [
             'asdfsadfs',
         ],
         description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        images:'https://placehold.jp/1200x200.png?text=Topic 6'
     },
     {
         id:7,
@@ -68,6 +74,7 @@ export const homeMenuData = [
             'zvgdfdf',
         ],
         description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        images:'https://placehold.jp/1200x200.png?text=Topic 7'
     },
     {
         id:8,
@@ -78,6 +85,7 @@ export const homeMenuData = [
             'fbbdgdf',
         ],
         description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        images:'https://placehold.jp/1200x200.png?text=Topic 8'
     },
     {
         id:9,
@@ -88,5 +96,29 @@ export const homeMenuData = [
             'ertvbbc',
         ],
         description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        images:'https://placehold.jp/1200x200.png?text=Topic 9'
     }
-]
+];
+
+export const sliderItems = [
+    {
+      imageSrc: process.env.PUBLIC_URL + '/logo.svg',
+      imageAlt: "A person's eye",
+    },
+    {
+      imageSrc: process.env.PUBLIC_URL + '/logo.svg',
+      imageAlt: 'A rock formation',
+    },
+    {
+      imageSrc: process.env.PUBLIC_URL + '/logo.svg',
+      imageAlt: 'Some flowers',
+    },
+    {
+      imageSrc: process.env.PUBLIC_URL + '/logo.svg',
+      imageAlt: 'An egyptian wall painting',
+    },
+    {
+      imageSrc: process.env.PUBLIC_URL + '/logo.svg',
+      imageAlt: 'A butterfly on a leaf',
+    },
+];

@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { Container, Nav, Navbar,Image } from 'react-bootstrap';
+import { Container, Nav, Navbar, Image } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import {APP_DETAILS} from '../utils/constants'
-import logo from '../assets/svg/logo.svg'
-const Header:FC = () => {
+import { APP_DETAILS } from '../../utils/constants'
+import logo from '../../assets/svg/logo.svg'
+const Header: FC = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container fluid className='header-container'>

@@ -4,6 +4,7 @@ export interface dummyData {
     topic: string,
     links: string[],
     description: string,
+    images: string
 };
 
 export interface UiVirtualScrollProps {
@@ -24,6 +25,14 @@ export interface APP_DATA {
     APP_BASE: string,
 }
 
-export interface AppRouterProps {
+export interface AppRouterProps {   
+}
+
+export interface ItemDetailsProps {
     
+}
+
+export interface SliderProps {
+    imageSrc: string,
+    imageAlt: string,
 }

@@ -1,8 +1,8 @@
 import React, { FC, useRef, useState } from 'react'
-import { UiVirtualScrollProps } from '../utils/interfaces'
+import { UiVirtualScrollProps } from '../../interfaces'
 
 const UiVirtualScroll: FC<UiVirtualScrollProps> = ({
-    offset = 0,
+    offset = 5,
     buffer,
     limit,
     rowHeight,

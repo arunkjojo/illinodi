@@ -8,23 +8,19 @@ import './css/mediaQuery.css';
 
 
 // Components
-import HeaderComponent from './components/Header';
-import FooterComponent from './components/Footer';
-
-// const HeaderComponent = lazy(() => import('./components/Header'));
-// const FooterComponent = lazy(() => import('./components/Footer'));
+import HeaderComponent from './components/common/Header';
+import FooterComponent from './components/common/Footer';
 
 // Pages
 import HomePage from './pages/HomePage';
 import PaymentPage from './pages/PaymentPage';
 import LoginPage from './pages/LoginPage';
+import ItemDetails from './pages/ItemDetails';
 // const HomePage = lazy(() => import('./pages/HomePage'));
-
-// const Application = lazy(() => import('./utils/routes'));
 
 
 const App: FC = () => {
-  
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -39,6 +35,7 @@ const App: FC = () => {
           <Route index path="/home" element={<HomePage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="payment" element={<PaymentPage />} />
+          <Route path="item-details" element={<ItemDetails />} />
           <Route index path="*" element={<HomePage />} />
         </Routes>
 
