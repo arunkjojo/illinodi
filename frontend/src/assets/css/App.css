@@ -1,0 +1,35 @@
+/* Header */
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.ms-sm-3 {
+  margin-left: 1rem !important;
+}
+
+/* Body */
+
+/* Home page */
+
+.home-container {
+  margin-top: 1rem;
+}
+
+
+/* Footer */

@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Css
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/App.css';
-import './css/mediaQuery.css';
+import './assets/css/App.css';
 
+// import './assets/css/custom.css';
 
 // Components
 import HeaderComponent from './components/common/Header';
@@ -13,9 +13,8 @@ import FooterComponent from './components/common/Footer';
 
 // Pages
 import HomePage from './pages/HomePage';
-import PaymentPage from './pages/PaymentPage';
 import LoginPage from './pages/LoginPage';
-import ItemDetails from './pages/ItemDetails';
+import { Container } from 'react-bootstrap';
 // const HomePage = lazy(() => import('./pages/HomePage'));
 
 
@@ -30,14 +29,14 @@ const App: FC = () => {
 
         {/* <Application /> */}
 
-        <Routes >
-          <Route index path="/" element={<HomePage />} />
-          <Route index path="/home" element={<HomePage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="payment" element={<PaymentPage />} />
-          <Route path="item-details" element={<ItemDetails />} />
-          <Route index path="*" element={<HomePage />} />
-        </Routes>
+        <Container className='container'>
+          <Routes>
+            <Route index path="/" element={<HomePage />} />
+            <Route index path="/home" element={<HomePage />} />
+            <Route path="login" element={<LoginPage />} />
+            <Route index path="*" element={<HomePage />} />
+          </Routes>
+        </Container>
 
         {/* Footer */}
         <FooterComponent />
