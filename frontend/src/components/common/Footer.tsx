@@ -3,7 +3,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Facebook, ShareFill, Whatsapp, CashCoin } from "react-bootstrap-icons";
 import { FacebookShareButton, WhatsappShareButton } from "react-share";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { APP_DETAILS } from '../../utils/constants'
+import { APP_URL } from '../../utils/constants'
 
 
 const Footer: FC = () => {
@@ -35,7 +35,7 @@ const Footer: FC = () => {
               <Nav.Item>
                 <Nav.Link href="/">
                   <FacebookShareButton
-                    url={`${APP_DETAILS.APP_URL}`}
+                    url={`${APP_URL}`}
                   >
                     <Facebook color="royalblue" size={30} />
                   </FacebookShareButton>
@@ -44,7 +44,7 @@ const Footer: FC = () => {
               <Nav.Item>
                 <Nav.Link eventKey="link-1">
                   <WhatsappShareButton
-                    url={`${APP_DETAILS.APP_URL}`}
+                    url={`${APP_URL}`}
                   >
                     <Whatsapp color="green" size={30} />
                   </WhatsappShareButton>
@@ -52,7 +52,7 @@ const Footer: FC = () => {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="link-2">
-                  <CopyToClipboard text={`${APP_DETAILS.APP_URL}`}>
+                  <CopyToClipboard text={`${APP_URL}`}>
                     <ShareFill color="red" size={30} />
                   </CopyToClipboard>
                 </Nav.Link>

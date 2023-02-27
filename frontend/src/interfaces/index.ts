@@ -23,9 +23,3 @@ export interface SliderProps {
     imageSrc : string,
     imageAlt: string,
 }
-
-export interface APP_DATA {
-    APP_NAME : string,
-    APP_URL: string,
-    APP_BASE: string,
-}
