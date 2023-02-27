@@ -8,10 +8,10 @@ import { APP_DETAILS } from '../../utils/constants'
 
 const Footer: FC = () => {
   return (
-    <Navbar className="my-0 footer_navbar" bg="light" variant="light">
+    <Navbar bg="light" variant="light">
       <Container fluid className='footer-container'>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse className="nav-bar" id="responsive-navbar-nav">
+        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+        {/* <Navbar.Collapse> */}
           <Nav className="nav me-auto">
             <Nav defaultActiveKey="/" className="flex-column">
               <Nav.Link href="/">Home</Nav.Link>
@@ -64,7 +64,7 @@ const Footer: FC = () => {
               </Nav.Item>
             </Nav>
           </Nav>
-        </Navbar.Collapse>
+        {/* </Navbar.Collapse> */}
 
       </Container>
     </Navbar>

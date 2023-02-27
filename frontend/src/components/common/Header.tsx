@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Container, Nav, Navbar, Image, NavDropdown, Form, Card, Dropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, Image, NavDropdown, Form } from 'react-bootstrap';
 // import { APP_DETAILS } from '../../utils/constants'
 import logo from '../../assets/svg/logo.svg'
 
@@ -104,7 +104,7 @@ const Header: FC = () => {
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item className='ms-2'>
-                        <Image className="rounded-circle user-img" rounded width="30" height="30" src={`https://mdbcdn.b-cdn.net/img/new/avatars/2.webp`} alt={`${logo}`} />
+                        <Image className="rounded-circle user-img" rounded width="75" height="65" src={`${logo}`} alt={`${logo}`} />
                     </Nav.Item>
                 </Nav>
                 {/* Nav right END */}

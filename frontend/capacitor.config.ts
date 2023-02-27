@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.inluxi.kerala2',
-  appName: 'kerala2',
+  appId: 'com.inluxi.illinodi',
+  appName: 'illinodi',
   webDir: 'build',
   bundledWebRuntime: false
 };

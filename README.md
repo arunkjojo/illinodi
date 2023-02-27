@@ -26,3 +26,23 @@
         - pages: Each of the pages inside of application like sign-in, sing-up, dashboard, main, setting, and profile.
         - test: Testing files like App.text.tsx.
         - utils: It include utilize for application like APIs, Authentication, Routes management, and State management.
+
+# Capacitor
+    Install Capacitor: `$ npm install @capacitor/core @capacitor/cli`
+
+    Create a config for your app: `$ npx cap init`
+        - appId: 'com.inluxi.illinodi',
+        - appName: 'illinodi',
+
+    Build the Web App: `$ npm run build`
+    
+    Install the native platforms: `$ npm i @capacitor/android @capacitor/ios`
+        - Add android: `$ npx cap add android`
+        - Add IOs: `$ npx cap add ios`
+
+    Open the native platforms: 
+        - Open android Studio: `$ npx cap open android`
+        - Open XCode: `$ npx cap open ios`
+
+    Help: `$ npx cap [-V] [-h] [<command>]`
+
