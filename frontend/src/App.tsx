@@ -13,6 +13,7 @@ import HeaderComponent from './components/common/Header';
 import FooterComponent from './components/common/Footer';
 
 // Pages
+import IndexPage from './pages/IndexPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 
@@ -27,10 +28,10 @@ const App: FC = () => {
 
         <Container fluid className='home-container'>
           <Routes>
-            <Route index path="/" element={<HomePage />} />
+            <Route index path="/" element={<IndexPage />} />
             <Route index path="/home" element={<HomePage />} />
             <Route path="login" element={<LoginPage />} />
-            <Route index path="*" element={<HomePage />} />
+            <Route index path="*" element={<IndexPage />} />
           </Routes>
 
         </Container>

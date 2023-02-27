@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Container, Nav, Navbar, Image, NavDropdown, Form } from 'react-bootstrap';
 // import { APP_DETAILS } from '../../utils/constants'
 import logo from '../../assets/svg/logo.svg'
+import icon from '../../assets/images/icon.png'
 
 import { BellFill, ChatLeftDotsFill, GearFill } from 'react-bootstrap-icons';
 
@@ -14,7 +15,7 @@ const Header: FC = () => {
 
                 {/* Logo START */}
                 <Navbar.Brand className="brand" href="/">
-                    <Image width="45" height="45" className="brand-img d-inline-block align-top" src={`${logo}`} alt={`${logo}`} />
+                    <Image width="45" height="45" className="brand-img d-inline-block align-top" src={`${icon}`} alt={`${icon}`} />
                     {/* <span className="brand-text d-none d-md-inline">{APP_DETAILS.APP_NAME}</span> */}
                 </Navbar.Brand>
                 {/* Logo END */}

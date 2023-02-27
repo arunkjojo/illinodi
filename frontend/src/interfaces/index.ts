@@ -19,20 +19,13 @@ export interface UiVirtualScrollProps {
     onNextCallback: (newOffset: number) => Promise<boolean>
 }
 
+export interface SliderProps {
+    imageSrc : string,
+    imageAlt: string,
+}
+
 export interface APP_DATA {
     APP_NAME : string,
     APP_URL: string,
     APP_BASE: string,
-}
-
-export interface AppRouterProps {   
-}
-
-export interface ItemDetailsProps {
-    
-}
-
-export interface SliderProps {
-    imageSrc: string,
-    imageAlt: string,
 }
