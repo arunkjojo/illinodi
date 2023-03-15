@@ -23,3 +23,9 @@ export interface SliderProps {
     imageSrc : string,
     imageAlt: string,
 }
+
+export default interface ProductData {
+    id?: any | null,
+    name?: string | null,
+    price?: any | null,
+}

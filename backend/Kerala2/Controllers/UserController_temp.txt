@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Kerala2.Data;
+using Kerala2.Models;
+using Microsoft.AspNetCore.Cors;
+
+namespace Kerala2.Controllers
+{
+    /*[EnableCors("applicationCorsPolicy")]*/
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UserController : ControllerBase
+    {
+        private readonly ApplicationAPIContext _context;
+
+        public UserController(ApplicationAPIContext context)
+        {
+            _context = context;
+        }
+
+        // GET: api/User
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<APIResponse<UserDataApiResponse>>>> GetUSer()
+        {
+            var userData = await _context.User.ToListAsync();
+            var apiResData = new UserDataApiResponse
+            {
+                user = userData,
+                location = userData,
+            };
+            var response = new APIResponse<UserDataApiResponse>
+            {
+                Msg = "Hi",
+                Data = apiResData
+            };
+            return Ok(response);
+        }
+
+    }
+}
